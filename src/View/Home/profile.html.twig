@@ -1,0 +1,51 @@
+{% extends "layout.html.twig" %}
+{% block stylesheet %}
+    <link rel="stylesheet" href="assets/css/styleProfile.css">
+{% endblock %}
+{% block content %}
+    <section class="identity">
+        <img src="" alt="" class="identity__picture">
+        <form class="identity__information form-control mt-2">
+            <label class="identity__information__label" for="firstname">Prénom :
+                <input type="text" name="firstname" id="firstname">
+            </label>
+            <label class="identity__information__label" for="mail">Email :
+                <input type="mail" name="mail" id="mail">
+            </label>
+            <label class="identity__information__label" for="adresse">Adresse :
+                <input type="text" name="adresse" id="adresse">
+            </label>
+            <label class="identity__information__label" for="codePost">Code Postal :
+                <input type="text" name="codePost" id="codePost">
+            </label>
+            <label class="identity__information__label" for="city">Ville :
+                <input type="text" name="city" id="city">
+            </label>
+        </form>
+    </section> 
+
+    <hr>
+
+    <form action="" method="post" class="form__addAlbum">
+        <label class="form__addAlbum__label" for="artist">Artiste :<input class="form__addAlbum__label__input" type="text" name="artist" id="artist"></label>
+        <label class="form__addAlbum__label"for="album">Album :<input class="form__addAlbum__label__input" type="text" name="album" id="album"></label>
+        <input type="submit" value="Ajouter">
+    </form>
+
+    <section class="list">
+        {% if list %}
+            <ul  class="list">
+                {% for album in list %}
+                    <li class="list__li">{{ album.cover}}</li>
+                    <li class="list__li">{{ album.artist }}</li>
+                    <li class="list__li">{{ album.album }}</li>
+                    <ol>
+                        {% for track in album %}
+                            <li>{{ tack }}</li>
+                        {% endfor %}
+                    </ol>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </section>
+{% endblock %}
