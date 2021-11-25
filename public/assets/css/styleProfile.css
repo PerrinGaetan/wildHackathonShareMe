@@ -1,0 +1,19 @@
+.identity {
+    display: flex;
+    justify-content: space-between;
+}
+
+.identity__picture {
+    width: 8rem;
+    height: 8rem;
+    margin-top: 3rem;
+    margin-left: 0.5rem;
+    border-radius: 1px solid red;
+}
+
+.identity__information {
+    width: 17rem;
+    margin-left: 2rem;
+}
+
+

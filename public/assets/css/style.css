@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+/* section search */
+
+.search {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+}
+
+
+.search__form__label__input {
+    width: 20rem;
+}
+
+/* section most popular  */
+
+#carouselExampleDark {
+    margin-top: 4rem;
+}
+
+.mostPopular {
+    height: 40rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 5rem;
+}
+
+.mostPopular__popular {
+    width: 16rem;
+    height: 16rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+/* .mostPopular__popular__figure {
+    border-radius: 50%;
+} */
+
+.mostPopular__popular__figure__cover {
+    height: 10rem;
+    border-radius: 50%;
+    border: 40px solid #0f0d11;
+    /* border: 3px solid #f36e22; */
+    
+}
+
+.mostPopular__popular__figure__legend {
+    margin-top: 1rem;
+    text-align: center;
+    color: #f36e22;
+}
+
+/* section geoloc */
+
+.aroundMe {
+    display: flex;
+    justify-content: center;
+}
