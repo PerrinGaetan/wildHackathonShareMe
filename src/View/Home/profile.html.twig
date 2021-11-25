@@ -1,11 +1,12 @@
 {% extends "layout.html.twig" %}
 {% block stylesheet %}
+{{ parent() }}
     <link rel="stylesheet" href="assets/css/styleProfile.css">
 {% endblock %}
 {% block content %}
     <section class="identity">
         <img src="" alt="" class="identity__picture">
-        <form class="identity__information form-control mt-2">
+        <form class="identity__information form-control mt-2" method="post">
             <label class="identity__information__label" for="firstname">Prénom :
                 <input type="text" name="firstname" id="firstname">
             </label>
