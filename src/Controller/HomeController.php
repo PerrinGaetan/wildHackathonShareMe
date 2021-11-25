@@ -23,4 +23,8 @@ class HomeController extends AbstractController
     {
         return $this->twig->render('Home/homepage.html.twig');
     }
+    public function show()
+    {
+        return $this->twig->render('Home/profile.html.twig');
+    }
 }

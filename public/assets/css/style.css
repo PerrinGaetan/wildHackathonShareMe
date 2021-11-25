@@ -23,6 +23,10 @@ h1 {
 
 /* section most popular  */
 
+#carouselExampleDark {
+    margin-top: 4rem;
+}
+
 .mostPopular {
     height: 40rem;
     display: flex;
