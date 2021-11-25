@@ -23,18 +23,22 @@ class HomeController extends AbstractController
      */
     public function index()
     {
+        $searchManager = new SearchManager();
+        $mostPopular = $searchManager->selectTopMusic();
+
         if (!empty($_GET)) {
-            $match = new SearchManager();
-            $result = $match->readUser($_GET);
-            var_dump($result);
-            return $this->twig->render('Home/homepage.html.twig', ['matches' => $result]);
+            $result = $searchManager->readUser($_GET);
+            return $this->twig->render(
+                'Home/homepage.html.twig',
+                ['matches' => $result,
+                'mostPopular' => $mostPopular]
+            );
         }
-        return $this->twig->render('Home/homepage.html.twig');
+
+        return $this->twig->render('Home/homepage.html.twig', ['mostPopular' => $mostPopular]);
     }
     public function show()
     {
-        $match = new SearchManager();
-        $match->selectAllMatches($_GET);
         return $this->twig->render('Home/profile.html.twig');
     }
 }

@@ -50,4 +50,24 @@ class SearchManager extends AbstractManager
 
         return $matchesFinal;
     }
+
+    public function selectMorePopular()
+    {
+        $query = "SELECT musicId, count(musicId) as total FROM userList  group by musicId ORDER BY total desc LIMIT 6;";
+        $statement = $this->pdo->query($query);
+        return $statement->fetchAll();
+    }
+
+    public function selectTopMusic()
+    {
+        $top = $this->selectMorePopular();
+        $topPopular = [];
+        foreach ($top as $musicId) {
+            $musicId = intval($musicId['musicId']);
+            $query = "SELECT * FROM music WHERE id=$musicId";
+            $statement = $this->pdo->query($query);
+            $topPopular[] = $statement->fetchAll();
+        }
+        return $topPopular;
+    }
 }
