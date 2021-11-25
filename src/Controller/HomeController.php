@@ -9,6 +9,8 @@
 
 namespace App\Controller;
 
+use App\Model\SearchManager;
+
 class HomeController extends AbstractController
 {
     /**
@@ -21,10 +23,18 @@ class HomeController extends AbstractController
      */
     public function index()
     {
+        if (!empty($_GET)) {
+            $match = new SearchManager();
+            $result = $match->readUser($_GET);
+            var_dump($result);
+            return $this->twig->render('Home/homepage.html.twig', ['matches' => $result]);
+        }
         return $this->twig->render('Home/homepage.html.twig');
     }
     public function show()
     {
+        $match = new SearchManager();
+        $match->selectAllMatches($_GET);
         return $this->twig->render('Home/profile.html.twig');
     }
 }

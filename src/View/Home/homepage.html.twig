@@ -96,9 +96,27 @@
     </div>
 </div>
 
+<section class="match">
+    {% if matches %}
+            <ul class="cardUser">
+                {% for match in matches %}
+                    <div class="cardUser__div">
+                        <li class="userMatch"><a href="/profile?id={{ match.id }}">{{ match.name }}</a></li>
+                        <div class="blackCircle">
+                            <div class="orangeCircle">
+                                <div class="holeCenter"></div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </ul>
+            
+        {% endif %}
+</section>
 
-
-    <section class="aroundMe"><img class="aroundMe__picture" src="https://static.papergeek.fr/2018/06/facebook-localisation.jpg" alt=""></section>
+    <section class="aroundMe">
+        <iframe src="https://www.google.com/maps/d/embed?mid=1gnBWAwBGQAbYmh8Na8AiDBEgHv5Z8hhP" width="940" height="680"></iframe>
+    </section>
 
 </main>
 {% endblock %}
