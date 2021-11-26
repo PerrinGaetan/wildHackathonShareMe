@@ -1,0 +1,190 @@
+body {
+    background-image: url("/../assets/images/bglogin.jpg");
+    background-size: cover;
+    overflow: hidden;
+}
+
+/*MOBILE FIRST*/
+
+.signup-title {
+    margin: 1rem;
+    background-color: transparent;
+    padding: 1rem;
+    border-radius: 11px;
+    text-align: center;
+    font-size: 2rem;
+    text-shadow: 5px 5px 8px rgb(0, 0, 0);
+}
+
+.name {
+    text-shadow: 5px 5px 8px rgb(0, 0, 0);
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    margin-right: 5rem;
+}
+
+.ville {
+    text-shadow: 5px 5px 8px rgb(0, 0, 0);
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    margin-right: 2rem;
+}
+
+.email {
+    text-align: center;
+    text-shadow: 5px 5px 8px rgb(0, 0, 0);
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.password {
+    text-align: center;
+    text-shadow: 5px 5px 8px rgb(0, 0, 0);
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.adress {
+    text-align: center;
+    text-shadow: 5px 5px 8px rgb(0, 0, 0);
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+
+.form-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-items: center;
+    width: 100%;
+    margin-left: 1rem;
+}
+
+input[type=date], input[type=email], input[type=password], input[type=text] {
+    width: 21rem;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+    align-content: center;
+    border-radius: 11px;
+}
+
+input[type=submit] {
+    font-size: 20px;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 1rem 5rem 1rem 5rem;
+    width: 13rem;
+    border-radius: 11px;
+    box-shadow: 2px 2px 4px black;
+}
+
+
+
+/*END OF MOBILE FIRST*/
+
+
+/*DESKTOP FIRST*/
+
+@media only screen and (min-width: 920px) {
+    .signup-title {
+        text-align: center;
+        background-color: transparent;
+        font-size: 4rem;
+        text-shadow: 5px 5px 8px rgb(0, 0, 0);
+        color: aliceblue;
+    }
+
+    .name {
+        text-shadow: 5px 5px 8px rgb(0, 0, 0);
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+        margin: 5px auto 5px auto;
+        color: aliceblue;
+    }
+
+    .ville {
+        text-shadow: 5px 5px 8px rgb(0, 0, 0);
+        font-size: 30px;
+        margin: 5px auto 5px auto;
+        font-weight: bold;
+        color: aliceblue;
+    }
+
+    .codepostal {
+        text-align: center;
+        text-shadow: 5px 5px 8px rgb(0, 0, 0);
+        font-size: 30px;
+        margin: 5px auto 5px auto;
+        font-weight: bold;
+        color: aliceblue;
+    }
+
+    .email {
+        text-align: center;
+        text-shadow: 5px 5px 8px rgb(0, 0, 0);
+        font-size: 30px;
+        margin: 5px auto 5px auto;
+        font-weight: bold;
+        color: aliceblue;
+    }
+
+    .password {
+        text-align: center;
+        text-shadow: 5px 5px 8px rgb(0, 0, 0);
+        font-size: 30px;
+        margin: 5px auto 5px auto;
+        font-weight: bold;
+        color: aliceblue;
+    }
+
+    .adress {
+        text-align: center;
+        text-shadow: 5px 5px 8px rgb(0, 0, 0);
+        font-size: 30px;
+        margin: 5px auto 5px auto;
+        font-weight: bold;
+        color: aliceblue;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: auto;
+    }
+
+    input[type=date], input[type=email], input[type=password], input[type=text]  {
+        width: 30rem;
+        padding: 12px 20px;
+        border: 1px solid #ccc;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    input[type=submit] {
+        font-size: 20px;
+        padding: 14px 20px;
+        border: none;
+        cursor: pointer;
+        margin: 1rem 5rem 1rem 5rem;
+        width: 13rem;
+        border-radius: 11px;
+        box-shadow: 2px 2px 4px black;
+        font-weight: bold;
+    }
+
+    input[type=submit]:hover {
+        color: blue;
+    }
+
+}

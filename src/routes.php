@@ -10,6 +10,8 @@ return [
     '' => ['HomeController', 'index',],
     'profil' => ['ProfileController', 'displayListById',],
     'items' => ['ItemController', 'index',],
+    'login' => ['LogInController', 'index',],
+    'signup' => ['SignUpController', 'index',],
     'items/edit' => ['ItemController', 'edit', ['id']],
     'items/show' => ['ItemController', 'show', ['id']],
     'items/add' => ['ItemController', 'add',],
