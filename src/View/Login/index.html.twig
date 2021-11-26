@@ -1,0 +1,29 @@
+{% extends 'layout.html.twig' %}
+{% block stylesheet %}
+	{{ parent() }}
+	<link rel="stylesheet" href="assets/css/homepage.css">
+	<link rel="stylesheet" href="assets/css/styleCarousel.css">
+    <link rel="stylesheet" href="/assets/css/login.css">
+{% endblock %}
+
+{% block title %} Connexion {% endblock %}
+
+{% block content %}
+<div class="main-background"></div>
+<div class="login-container">
+    <h3 class="login-title">Connexion à LendZik</h3>
+    <div class="form-container">
+        <form class="form" action="" method="POST">
+            <label for="email"><p class="email">Email</p></label>
+            <input type="text" id="email" placeholder="Entrer votre Email" name="email" required>
+            <label for="password"><p class="password">Mot de passe</p></label>
+            <input type="password" id="password" placeholder="Entrer le mot de passe" name="password" required>
+            <input type="submit" id="submit" value="Connexion">
+
+            <div class="noaccount">
+                <a class="noaccount-href" href="/signup">Créer un compte</a>
+            </div>
+        </form>
+    </div>
+    {% endblock %}
+
