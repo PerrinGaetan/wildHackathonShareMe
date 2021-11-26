@@ -160,7 +160,7 @@ main h2 {
   }
   
   .text-intro {
-    width: 45rem;
+    width: 60%;
     animation: typing 4s steps(50), blink .5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;

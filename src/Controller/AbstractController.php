@@ -23,6 +23,8 @@ abstract class AbstractController
                 'debug' => (ENV === 'dev'),
             ]
         );
+        // session_start();
+        // $this->twig->addGlobal('link', $_SESSION);
         $this->twig->addExtension(new DebugExtension());
     }
 }
