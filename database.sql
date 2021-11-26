@@ -28,6 +28,8 @@ CREATE TABLE `music` (
   `id` int NOT NULL AUTO_INCREMENT,
   `artist` varchar(255) NOT NULL,
   `album` varchar(255) NOT NULL,
+
+  `cover` varchar (255),
   `user_id` int NOT NULL,
   PRIMARY KEY (`id`),
   CONSTRAINT `user_id` FOREIGN KEY (`id`) REFERENCES `user` (`id`)

@@ -1,11 +1,12 @@
 {% extends "layout.html.twig" %}
 {% block stylesheet %}
+{{ parent() }}
     <link rel="stylesheet" href="assets/css/styleProfile.css">
 {% endblock %}
 {% block content %}
     <section class="identity">
         <img src="" alt="" class="identity__picture">
-        <form class="identity__information form-control mt-2">
+        <form class="identity__information form-control mt-2" method="post">
             <label class="identity__information__label" for="firstname">Prénom :
                 <input type="text" name="firstname" id="firstname">
             </label>
@@ -33,15 +34,15 @@
     </form>
 
     <section class="list">
-        {% if list %}
+        {% if results %}
             <ul  class="list">
-                {% for album in list %}
-                    <li class="list__li">{{ album.cover}}</li>
-                    <li class="list__li">{{ album.artist }}</li>
-                    <li class="list__li">{{ album.album }}</li>
+                {% for album in results %}
+                    <li class="list__li"><img src="{{ album.album.image.1['#text']}}" alt="jacket de {{ album.album.name }}"></li>
+                    <li class="list__li">{{ album.album.artist }}</li>
+                    <li class="list__li">{{ album.album.name }}</li>
                     <ol>
-                        {% for track in album %}
-                            <li>{{ tack }}</li>
+                        {% for track in album.album.tracks.track %}
+                            <li>{{ track.name }}</li>
                         {% endfor %}
                     </ol>
                 {% endfor %}

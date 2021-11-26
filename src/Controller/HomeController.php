@@ -9,6 +9,8 @@
 
 namespace App\Controller;
 
+use App\Model\SearchManager;
+
 class HomeController extends AbstractController
 {
     /**
@@ -21,7 +23,19 @@ class HomeController extends AbstractController
      */
     public function index()
     {
-        return $this->twig->render('Home/homepage.html.twig');
+        $searchManager = new SearchManager();
+        $mostPopular = $searchManager->selectTopMusic();
+
+        if (!empty($_GET)) {
+            $result = $searchManager->readUser($_GET);
+            return $this->twig->render(
+                'Home/homepage.html.twig',
+                ['matches' => $result,
+                'mostPopular' => $mostPopular]
+            );
+        }
+
+        return $this->twig->render('Home/homepage.html.twig', ['mostPopular' => $mostPopular]);
     }
     public function show()
     {

@@ -45,16 +45,10 @@ h1 {
     border-radius: 50%;
 }
 
-/* .mostPopular__popular__figure {
-    border-radius: 50%;
-} */
-
 .mostPopular__popular__figure__cover {
     height: 10rem;
     border-radius: 50%;
-    border: 40px solid #0f0d11;
-    /* border: 3px solid #f36e22; */
-    
+    border: 40px solid #0f0d11;    
 }
 
 .mostPopular__popular__figure__legend {
@@ -68,4 +62,54 @@ h1 {
 .aroundMe {
     display: flex;
     justify-content: center;
+}
+
+/* carousel */
+
+.carouselSize {
+    height: 20rem;
+}
+
+
+/* Matches */
+
+.blackCircle {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    background-color: #0f0d11;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.orangeCircle {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: #cf5a0b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.holeCenter {
+    height: 0.5rem;
+    width: 0.5rem;
+    border-radius: 50%;
+    background-color: #dededf;
+    border: 1px solid blue;
+}
+
+.userMatch {
+    list-style: none;
+    text-align: center;
+}
+
+.cardUser__div {
+    width: 5rem;
+}
+
+.cardUser {
+    display: flex;
+    justify-content: space-around;
 }
