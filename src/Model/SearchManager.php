@@ -70,4 +70,13 @@ class SearchManager extends AbstractManager
         }
         return $topPopular;
     }
+
+    public function getListUser(int $id)
+    {
+        $query = "SELECT * FROM music JOIN userList ON userId = :id AND userList.musicId = music.id; ";
+        $statement = $this->pdo->prepare($query);
+        $statement->bindValue(":id", $id, PDO::PARAM_INT);
+        $statement->execute();
+        return $statement->fetchAll();
+    }
 }
