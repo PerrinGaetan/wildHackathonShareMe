@@ -9,7 +9,9 @@
 	<header>
 		<div class="overlay">
 			<h1>Ne cherchez plus,<br/>vos voisins l'on sûrement</h1><br>
-			<a href="/profil"><button>Mon profil</button></a>
+			<a href="/profil">
+				<button>Mon profil</button>
+			</a>
 		</div>
 	</header>
 
@@ -20,185 +22,219 @@
 	</div>
 
 	<section class="search">
-        <form class="search__form" action="" method="get">
-            <label for="search">Je recherche :
-                <input class="search__form__label__input" type="search" name="artist" id="" placeholder="artist">
-                <input class="search__form__label__input" type="search" name="album" id="" placeholder="album">
-            </label>
-            <input class="search__form__input--submit" type="submit" value="Rechercher">
-        </form>
-    </section>
+		<form class="search__form" action="" method="get">
+			<label for="search">Je recherche :
+				<input class="search__form__label__input" type="search" name="artist" id="" placeholder="Nom de l'artiste">
+				<input class="search__form__label__input" type="search" name="album" id="" placeholder="Nom de l'album">
+			</label>
+			<input class="search__form__input--submit" type="submit" value="Rechercher">
+		</form>
+	</section>
 
-    <div class="container text-center my-3">
-    <div class="row mx-auto my-auto justify-content-center">
-        <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner" role="listbox">
-                <div class="carousel-item active">
-                    <div class="col-md-3">
-                        <div class="card">
-                            <div class="card-img">
-                                <img src="{{ mostPopular.0.0.0.cover }}" class="img-fluid" alt="{{ mostPopular.0.0.0.album }}">
-                            </div>
-                            <div class="card-img-overlay text-light">{{ mostPopular.0.0.0.artist }}</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="col-md-3">
-                        <div class="card">
-                            <div class="card-img">
-                                <img src="{{ mostPopular.1.0.0.cover }}" class="img-fluid" alt="{{ mostPopular.1.0.0.album }}">
-                            </div>
-                            <div class="card-img-overlay text-light">{{ mostPopular.1.0.0.artist }}</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="col-md-3">
-                        <div class="card">
-                            <div class="card-img">
-                                <img src="{{ mostPopular.2.0.0.cover }}" class="img-fluid" alt="{{ mostPopular.2.0.0.album }}">
-                            </div>
-                            <div class="card-img-overlay text-light">{{ mostPopular.2.0.0.artist }}</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="col-md-3">
-                        <div class="card">
-                            <div class="card-img">
-                                <img src="{{ mostPopular.3.0.0.cover }}" class="img-fluid" alt="{{ mostPopular.3.0.0.album }}">
-                            </div>
-                            <div class="card-img-overlay text-light">{{ mostPopular.3.0.0.artist }}</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="col-md-3">
-                        <div class="card">
-                            <div class="card-img">
-                                <img src="{{ mostPopular.4.0.0.cover }}" class="img-fluid" alt="{{ mostPopular.4.0.0.album }}">
-                            </div>
-                            <div class="card-img-overlay text-light">{{ mostPopular.4.0.0.artist }}</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="col-md-3">
-                        <div class="card">
-                            <div class="card-img">
-                                <img src="{{ mostPopular.5.0.0.cover }}" class="img-fluid" alt="{{ mostPopular.5.0.0.album }}">
-                            </div>
-                            <div class="card-img-overlay text-light">{{ mostPopular.5.0.0.artist }}</div>
-                        </div>
-                    </div>
-                </div> 
-            </div>
-            <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </a>
-            <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </a>
-        </div>
-    </div>
-</div>
+	<div class="container text-center my-3">
+		<div class="row mx-auto my-auto justify-content-center">
+			<div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
+				<div class="carousel-inner" role="listbox">
+					<div class="carousel-item active">
+						<div class="col-md-3">
+							<div class="card">
+								<div class="card-img">
+									<img src="{{ mostPopular.0.0.0.cover }}" class="img-fluid" alt="{{ mostPopular.0.0.0.album }}">
+								</div>
+								<div class="card-img-overlay text-light">{{ mostPopular.0.0.0.artist }}</div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="col-md-3">
+							<div class="card">
+								<div class="card-img">
+									<img src="{{ mostPopular.1.0.0.cover }}" class="img-fluid" alt="{{ mostPopular.1.0.0.album }}">
+								</div>
+								<div class="card-img-overlay text-light">{{ mostPopular.1.0.0.artist }}</div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="col-md-3">
+							<div class="card">
+								<div class="card-img">
+									<img src="{{ mostPopular.2.0.0.cover }}" class="img-fluid" alt="{{ mostPopular.2.0.0.album }}">
+								</div>
+								<div class="card-img-overlay text-light">{{ mostPopular.2.0.0.artist }}</div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="col-md-3">
+							<div class="card">
+								<div class="card-img">
+									<img src="{{ mostPopular.3.0.0.cover }}" class="img-fluid" alt="{{ mostPopular.3.0.0.album }}">
+								</div>
+								<div class="card-img-overlay text-light">{{ mostPopular.3.0.0.artist }}</div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="col-md-3">
+							<div class="card">
+								<div class="card-img">
+									<img src="{{ mostPopular.4.0.0.cover }}" class="img-fluid" alt="{{ mostPopular.4.0.0.album }}">
+								</div>
+								<div class="card-img-overlay text-light">{{ mostPopular.4.0.0.artist }}</div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="col-md-3">
+							<div class="card">
+								<div class="card-img">
+									<img src="{{ mostPopular.5.0.0.cover }}" class="img-fluid" alt="{{ mostPopular.5.0.0.album }}">
+								</div>
+								<div class="card-img-overlay text-light">{{ mostPopular.5.0.0.artist }}</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				</a>
+				<a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				</a>
+			</div>
+		</div>
+	</div>
 
-<section class="match">
-    {% if matches %}
-            <ul class="cardUser">
-                {% for match in matches %}
-                    <div class="cardUser__div">
-                        <li class="userMatch"><a href="/profil?id={{ match.id }}">{{ match.name }}</a></li>
-                        <div class="blackCircle">
-                            <div class="orangeCircle">
-                                <div class="holeCenter"></div>
-                            </div>
-                        </div>
-                    </div>
-                {% endfor %}
-            </ul>
-            
-        {% endif %}
-</section>
+	<section class="match">
+		{% if matches %}
+			<ul class="cardUser">
+				{% for match in matches %}
+					<div class="cardUser__div">
+						<li class="userMatch">
+							<a href="/profil?id={{ match.id }}">{{ match.name }}</a>
+						</li>
+						<div class="blackCircle">
+							<div class="orangeCircle">
+								<div class="holeCenter"></div>
+							</div>
+						</div>
+					</div>
+				{% endfor %}
+			</ul>
+
+		{% endif %}
+	</section>
 
 	{% if users %}
 		<section class="start">
 			<section class="bgPicture">
 				<div class="fixed-bg bg-picture">
 					<div class="userInfo">
-						<h2>Vinyle de
+						<h2 class="user">Vinyle de
 							{{user[0]['name']}}</h2>
 					</div>
 					<div class="musicInfo">
-						<img src="{{users[0][0]['cover']}}" alt="">
+						<img class="imgInfo" src="{{users[0][0]['cover']}}" alt="">
 						<div class="artisteInfo">
-							<h4 class="main-text">Artiste: {{users[0][0]['artist']}}</h4>
-							<h4 class="sub-text">Album: {{users[0][0]['album']}}</h4>
+							<h4 class="main-text">Artiste:
+								{{users[0][0]['artist']}}</h4>
+							<h4 class="sub-text">Album:
+								{{users[0][0]['album']}}</h4>
+						</div>
+					</div>
+					<div class="musicInfo">
+						<img class="imgInfo" src="{{users[0][1]['cover']}}" alt="">
+						<div class="artisteInfo">
+							<h4 class="main-text">Artiste:
+								{{users[0][1]['artist']}}</h4>
+							<h4 class="sub-text">Album:
+								{{users[0][1]['album']}}</h4>
 						</div>
 					</div>
 				</div>
 			</section>
 		</section>
-        <div class="transition"></div>
+		<div class="transition"></div>
 		<section class="start">
 			<section class="bgPicture">
 				<div class="fixed-bg bg-picture">
 					<div class="userInfo">
-						<h2>Vinyle de
+						<h2 class="user">Vinyle de
 							{{user[1]['name']}}</h2>
 					</div>
 					<div class="musicInfo">
-						<img src="{{users[0][1]['cover']}}" alt="">
+						<img class="imgInfo" src="{{users[0][1]['cover']}}" alt="">
 						<div class="artisteInfo">
-							<h4 class="main-text">Artiste: {{users[0][1]['artist']}}</h4>
-							<h4 class="sub-text">Album: {{users[0][1]['album']}}</h4>
+							<h4 class="main-text">Artiste:
+								{{users[1][1]['artist']}}</h4>
+							<h4 class="sub-text">Album:
+								{{users[1][1]['album']}}</h4>
 						</div>
 					</div>
 					<div class="musicInfo">
-						<img src="{{users[0][2]['cover']}}" alt="">
+						<img class="imgInfo" src="{{users[0][2]['cover']}}" alt="">
 						<div class="artisteInfo">
-							<h4 class="main-text">Artiste: {{users[0][2]['artist']}}</h4>
-							<h4 class="sub-text">Album: {{users[0][2]['album']}}</h4>
+							<h4 class="main-text">Artiste:
+								{{users[1][2]['artist']}}</h4>
+							<h4 class="sub-text">Album:
+								{{users[1][2]['album']}}</h4>
 						</div>
 					</div>
 					<div class="musicInfo">
-						<img src="{{users[0][0]['cover']}}" alt="">
+						<img class="imgInfo" src="{{users[0][0]['cover']}}" alt="">
 						<div class="artisteInfo">
-							<h4 class="main-text">Artiste: {{users[0][0]['artist']}}</h4>
-							<h4 class="sub-text">Album: {{users[0][0]['album']}}</h4>
+							<h4 class="main-text">Artiste:
+								{{users[1][0]['artist']}}</h4>
+							<h4 class="sub-text">Album:
+								{{users[1][0]['album']}}</h4>
 						</div>
 					</div>
 				</div>
 			</section>
 		</section>
-        <div class="transition"></div>
+		<div class="transition"></div>
 		<section class="start">
 			<section class="bgPicture">
 				<div class="fixed-bg bg-picture">
 					<div class="userInfo">
-						<h2>Vinyle de
+						<h2 class="user">Vinyle de
 							{{user[3]['name']}}</h2>
 					</div>
 					<div class="musicInfo">
-						<img src="{{users[2][0]['cover']}}" alt="">
+						<img class="imgInfo" src="{{users[2][0]['cover']}}" alt="">
 						<div class="artisteInfo">
-							<h4 class="main-text">Artiste: {{users[2][0]['artist']}}</h4>
-							<h4 class="sub-text">Album: {{users[2][0]['album']}}</h4>
+							<h4 class="main-text">Artiste:
+								{{users[2][0]['artist']}}</h4>
+							<h4 class="sub-text">Album:
+								{{users[2][0]['album']}}</h4>
 						</div>
 					</div>
 					<div class="musicInfo">
-						<img src="{{users[2][1]['cover']}}" alt="">
+						<img class="imgInfo" src="{{users[2][1]['cover']}}" alt="">
 						<div class="artisteInfo">
-							<h4 class="main-text">Artiste: {{users[2][1]['artist']}}</h4>
-							<h4 class="sub-text">Album: {{users[2][1]['album']}}</h4>
+							<h4 class="main-text">Artiste:
+								{{users[2][1]['artist']}}</h4>
+							<h4 class="sub-text">Album:
+								{{users[2][1]['album']}}</h4>
 						</div>
 					</div>
 					<div class="musicInfo">
-						<img src="{{users[2][2]['cover']}}" alt="">
+						<img class="imgInfo" src="{{users[2][2]['cover']}}" alt="">
 						<div class="artisteInfo">
-							<h4 class="main-text">Artiste: {{users[2][2]['artist']}}</h4>
-							<h4 class="sub-text">Album: {{users[2][2]['album']}}</h4>
+							<h4 class="main-text">Artiste:
+								{{users[2][2]['artist']}}</h4>
+							<h4 class="sub-text">Album:
+								{{users[2][2]['album']}}</h4>
+						</div>
+					</div>
+					<div class="musicInfo">
+						<img class="imgInfo" src="{{users[2][2]['cover']}}" alt="">
+						<div class="artisteInfo">
+							<h4 class="main-text">Artiste:
+								{{users[2][2]['artist']}}</h4>
+							<h4 class="sub-text">Album:
+								{{users[2][2]['album']}}</h4>
 						</div>
 					</div>
 				</div>
@@ -207,99 +243,17 @@
 	{% endif %}
 
 
-    
+	<div class="border">
+		<h2 class="text-around">Personnes autour de moi :</h2>
+	</div>
 
-    <section class="aroundMe">
-        <iframe src="https://www.google.com/maps/d/embed?mid=1gnBWAwBGQAbYmh8Na8AiDBEgHv5Z8hhP" width="940" height="680"></iframe>
-    </section>
+	<div class="aroundMe">
+		<iframe src="https://www.google.com/maps/d/embed?mid=1gnBWAwBGQAbYmh8Na8AiDBEgHv5Z8hhP" width="940" height="680"></iframe>
+	</div>
 
+		{% endblock %}
 
-	<main>
-
-		{% if users %}
-			<div class="container text-center my-3">
-				<h2 class="font-weight-light">Les vinyles tendances du site:</h2>
-				<div class="row mx-auto my-auto justify-content-center">
-					<div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
-						<div class="carousel-inner" role="listbox">
-							<div class="carousel-item active">
-								<div class="col-md-3">
-									<div class="card">
-										<div class="card-img">
-											<img src="{{users[0]['cover']}}" class="img-fluid">
-										</div>
-										
-									</div>
-								</div>
-							</div>
-							<div class="carousel-item">
-								<div class="col-md-3">
-									<div class="card">
-										<div class="card-img">
-											<img src="{{users[1]['cover']}}" class="img-fluid">
-										</div>
-										
-									</div>
-								</div>
-							</div>
-							<div class="carousel-item">
-								<div class="col-md-3">
-									<div class="card">
-										<div class="card-img">
-											<img src="{{users[2]['cover']}}" class="img-fluid">
-										</div>
-										
-									</div>
-								</div>
-							</div>
-							<div class="carousel-item">
-								<div class="col-md-3">
-									<div class="card">
-										<div class="card-img">
-											<img src="{{users[3]['cover']}}" class="img-fluid">
-										</div>
-										
-									</div>
-								</div>
-							</div>
-							<div class="carousel-item">
-								<div class="col-md-3">
-									<div class="card">
-										<div class="card-img">
-											<img src="{{users[4]['cover']}}" class="img-fluid">
-										</div>
-										
-									</div>
-								</div>
-							</div>
-							<div class="carousel-item">
-								<div class="col-md-3">
-									<div class="card">
-										<div class="card-img">
-											<img src="{{users[5]['cover']}}" class="img-fluid">
-										</div>
-										
-									</div>
-								</div>
-							</div>
-						</div>
-						<a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="prev">
-							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-						</a>
-						<a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="next">
-							<span class="carousel-control-next-icon" aria-hidden="true"></span>
-						</a>
-					</div>
-
-		{% endif %}
-	</main>
-
-    			{# <section class="aroundMe"><img class="aroundMe__picture" src="https://static.papergeek.fr/2018/06/facebook-localisation.jpg" alt=""></section> #}
-
-
-{% endblock %}
-
-{% block javascript %}
-	{{ parent() }}
-	<script src="assets/javascript/carousel.js"></script>
-{% endblock %} 
+		{% block javascript %}
+			{{ parent() }}
+			<script src="assets/javascript/carousel.js"></script>
+		{% endblock %}

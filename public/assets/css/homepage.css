@@ -52,7 +52,6 @@ button:hover {
   background-position: center center;
   display: flex;
   align-items: center;
-  justify-content: left;
   flex-direction: row;
   padding: 0 20px;
   line-height: 1.5;
@@ -100,11 +99,16 @@ button:hover {
     background-position: center center;
     flex-direction: row;
     display: flex;
-    background: rgb(255 255 255 / 60%);
+    background-color: transparent;
+    color: whitesmoke;
+    text-shadow: black 0 5px 5px;
 }
 
 .musicInfo {
-    width: 9rem;
+    width: 100rem;
+    justify-content: center;
+    position: relative;
+    right: 8rem;
 }
 
 .artisteInfo {
@@ -113,23 +117,23 @@ button:hover {
     width: 15rem;
 }
 
+.imgInfo {
+  border-radius: 50%;
+  border: black solid 15px;
+}
+
 .artisteInfo h3, h4 {
     margin-left: 0.5rem;
-    margin-top: 0.4rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
 }
 
 .userInfo {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    width: 15rem;
+    width: 60rem;
     height: 5rem;
-    gap: 0.4rem;
-    display: flex;
-    justify-content: center;
-}
-
-.musicInfo:nth-of-type(even) {
-margin-top: 20rem;
+    position: relative;
+    bottom: 10rem;
+    left: 50rem;
 }
 
 main {
@@ -140,6 +144,7 @@ main {
 main h2 {
     margin-bottom: 1rem;
 }
+
 
 .fixed-bg img {
     width: 10rem;
@@ -155,7 +160,7 @@ main h2 {
   }
   
   .text-intro {
-    width: 55rem;
+    width: 45rem;
     animation: typing 4s steps(50), blink .5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
@@ -175,3 +180,20 @@ main h2 {
     }
   }
   
+  .border {
+    background-color: white;
+    height: 7rem;
+    position: relative;
+    z-index: -1;
+    margin-top: -5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column-reverse;
+    font-size: 2em;
+  }
+
+  .aroundMe {
+    margin-top: -4rem;
+    position: relative;
+    z-index: -2;
+  }
