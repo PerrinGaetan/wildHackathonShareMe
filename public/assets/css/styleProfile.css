@@ -16,4 +16,217 @@
     margin-left: 2rem;
 }
 
+header {
+    background: url("https://www.10wallpaper.com/wallpaper/1366x768/1504/Vinyl_Records_Theme_HD_Desktop_Wallpaper_05_1366x768.jpg");
+    text-align: center;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0 0 85% 85% / 10%;
+  }
 
+  header .overlay {
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+    color: #fff;
+    text-shadow: 1px 1px 1px #333;
+    background-image: linear-gradient(135deg, #9f05ff69 10%, #fd5e086b 100%);
+  }
+  
+  h1 {
+    font-size: 80px;
+    margin-bottom: 30px;
+  }
+  
+  h3,
+  p {
+    margin-bottom: 30px;
+  }
+  
+  button {
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: #333;
+    background: #fff;
+    margin-bottom: 50px;
+    box-shadow: 0 3px 20px 0 #0000003b;
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
+
+  .transition {
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+    height: 15rem;
+    background-size: cover;
+    -webkit-background-size: cover !important;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 20px;
+    line-height: 1.5;
+    background-image: url(https://c.wallhere.com/photos/e4/e3/2560x1600_px_Disk_Gramophone_macro_music_vinyl-1298605.jpg!d);
+}
+
+.form__label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    margin-left: 2rem;
+    margin-top: 0.7rem;
+    display: block;
+    transition: all 0.3s;
+    transform: translateY(0rem);
+  }
+  
+  .form__input {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    font-size: 1.2rem;
+      margin: 0 auto;
+    border-radius: 0.2rem;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    width: 10rem;
+    height: 2rem;
+    display: block;
+    border-bottom: 0.3rem solid transparent;
+    transition: all 0.3s;
+    border: 1px double black;
+  }
+  
+  .form__input:placeholder-shown + .form__label {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateY(-4rem);
+    transform: translateY(-4rem);
+  }
+
+  .form__addAlbum {
+      margin: 1rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 2rem;
+  }
+
+  .send {
+      width: 9rem;
+      height: 2rem;
+  }
+
+  .list li {
+      list-style-type: none;
+      font-weight: bold;
+      font-size: 1rem;
+  }
+
+ 
+  
+  .wrapper {
+    height: 100%;
+    width: 70%;
+    height: 40vh;
+    margin-left: 5rem;
+  }
+
+  .tracks {
+      display: flex;
+      flex-direction: row;
+      gap: 3rem;
+      flex-flow: row wrap;
+  }
+
+  .tracks li {
+   margin-top: 2rem;
+  }
+
+  .listArtist {
+      display: flex;
+      flex-direction: row;
+      margin-top: 4rem;
+  }
+
+  .listTracks {
+      width: 15rem;
+      cursor: pointer;
+      text-align: center;
+      justify-content: center;
+  }
+
+  .listTracks li {
+      width: 15rem;
+  }
+
+  li text {
+      text-align: center;
+      width: 12rem;
+  }
+
+  .listTracks img {
+vertical-align: text-bottom;
+  }
+  
+  .blog_post {
+    position: relative;
+    padding: 4rem 2rem 4rem 4rem;
+    background: #fff;
+    max-width: 230px;
+    border-radius: 10px;
+    top: 30%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
+  }
+  
+  .img_pod {
+    height: 110px;
+    width: 110px;
+    z-index: -1;
+    border-radius: 100%;
+    position: absolute;
+    left: -50px;
+    top: 72px;
+    transform: translateY(-50%);
+  }
+  
+  img {
+    height: 100px;
+    width: 100px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+    box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
+  }
+  
+  .list h3 {
+    margin: 0 0 0.5rem 0;
+    color: #999;
+    font-size: 1.25rem;
+  }
+  
+  .list h1 {
+    margin: 0 0 1rem 0;
+    font-size: 2.5rem;
+    letter-spacing: 0.5px;
+    color: #333;
+  }
+  
+  .list p {
+    margin: 0 0 4.5rem 0;
+    font-size: 1.5rem;
+    color: #333;
+  }

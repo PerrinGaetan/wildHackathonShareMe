@@ -1,0 +1,176 @@
+header {
+    background: url("https://www.10wallpaper.com/wallpaper/1366x768/1504/Vinyl_Records_Theme_HD_Desktop_Wallpaper_05_1366x768.jpg");
+    text-align: center;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0 0 85% 85% / 10%;
+  }
+  header .overlay {
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+    color: #fff;
+    text-shadow: 1px 1px 1px #333;
+    background-image: linear-gradient(135deg, #9f05ff69 10%, #fd5e086b 100%);
+  }
+  
+  h1 {
+    font-size: 80px;
+    margin-bottom: 30px;
+  }
+  
+  h3,
+  p {
+    margin-bottom: 30px;
+  }
+  
+  button {
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: #333;
+    background: #fff;
+    margin-bottom: 50px;
+    box-shadow: 0 3px 20px 0 #0000003b;
+  }
+  button:hover {
+    cursor: pointer;
+  }
+  
+  .fixed-bg {
+    min-height: 27rem;
+    width: 100%;
+    background-size: cover;
+    -webkit-background-size: cover !important;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-direction: row;
+    padding: 0 20px;
+    line-height: 1.5;
+  }
+  
+  .bgPicture {
+      height: 27rem;
+  }
+  
+  .start {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      height: 30rem;
+  }
+  
+  .transition {
+      height: 8rem;
+      background-size: cover;
+      -webkit-background-size: cover !important;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-position: center center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 0 20px;
+      line-height: 1.5;
+      background-image: url(https://10wallpaper.com/wallpaper/1024x768/1311/plate_vinyl-Music_HD_Wallpaper_1024x768.jpg);
+  }
+  
+  .bg-picture {
+      background-image: url("https://th.bing.com/th/id/R.b08ab5db8e3d1019e6868c3411700d0c?rik=2hzd%2fAeQzEdxhQ&riu=http%3a%2f%2fst.gde-fon.com%2fwallpapers_original%2f586665_trubka_muzyika_plastinka_vinil_1920x1200_www.Gde-Fon.com.jpg&ehk=bRkbWnjyaVz4yHEFHbnHgmN26S4khCjj3eHUggGjunQ%3d&risl=&pid=ImgRaw&r=0");
+  }
+  
+  .bg-picture:nth-child(2) {
+      background-image: url("https://www.10wallpaper.com/wallpaper/1366x768/1504/Vinyl_Records_Theme_HD_Desktop_Wallpaper_05_1366x768.jpg");
+  }
+  
+  .userInfo, .musicInfo, .artisteInfo {
+      background-size: cover;
+      -webkit-background-size: cover !important;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-position: center center;
+      flex-direction: row;
+      display: flex;
+      background: rgb(255 255 255 / 60%);
+  }
+  
+  .musicInfo {
+      width: 9rem;
+  }
+  
+  .artisteInfo {
+      display: flex;
+      flex-direction: column;
+      width: 15rem;
+  }
+  
+  .artisteInfo h3, h4 {
+      margin-left: 0.5rem;
+      margin-top: 0.4rem;
+  }
+  
+  .userInfo {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      width: 15rem;
+      height: 5rem;
+      gap: 0.4rem;
+      display: flex;
+      justify-content: center;
+  }
+  
+  .musicInfo:nth-of-type(even) {
+  margin-top: 20rem;
+  }
+  
+  main {
+      display: flex;
+      margin: 2rem;
+  }
+  
+  main h2 {
+      margin-bottom: 1rem;
+  }
+  
+  .fixed-bg img {
+      width: 10rem;
+      height: 10rem;
+  }
+  
+  .intro {
+      margin-top: 3rem;
+      height: 5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .text-intro {
+      width: 55rem;
+      animation: typing 4s steps(50), blink .5s step-end infinite alternate;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid;
+      font-size: 2em;
+    }
+    
+    @keyframes typing {
+      from {
+        width: 0
+      }
+    }
+        
+    @keyframes blink {
+      50% {
+        border-color: transparent
+      }
+    }

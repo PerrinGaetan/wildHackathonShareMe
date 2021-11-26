@@ -1,52 +1,60 @@
 {% extends "layout.html.twig" %}
 {% block stylesheet %}
-{{ parent() }}
-    <link rel="stylesheet" href="assets/css/styleProfile.css">
+	{{ parent() }}
+	<link rel="stylesheet" href="assets/css/styleProfile.css">
 {% endblock %}
 {% block content %}
-    <section class="identity">
-        <img src="" alt="" class="identity__picture">
-        <form class="identity__information form-control mt-2" method="post">
-            <label class="identity__information__label" for="firstname">Prénom :
-                <input type="text" name="firstname" id="firstname">
-            </label>
-            <label class="identity__information__label" for="mail">Email :
-                <input type="mail" name="mail" id="mail">
-            </label>
-            <label class="identity__information__label" for="adresse">Adresse :
-                <input type="text" name="adresse" id="adresse">
-            </label>
-            <label class="identity__information__label" for="codePost">Code Postal :
-                <input type="text" name="codePost" id="codePost">
-            </label>
-            <label class="identity__information__label" for="city">Ville :
-                <input type="text" name="city" id="city">
-            </label>
-        </form>
-    </section> 
 
-    <hr>
+	<header>
+		<div class="overlay">
+			<h1>Ne cherchez plus,<br/>C'est ici que vous trouverez.</h1><br>
+			<a href="/">
+				<button>Accueil</button>
+			</a>
+		</div>
+	</header>
+	
+	<form action="" method="post" class="form__addAlbum">
+		<div class="form__group">
+			<input type="text" class="form__input" id="name" placeholder="Artiste..." required=""/>
+			<label for="name" class="form__label"></label>
+		</div>
+		<div class="form__group">
+			<input type="text" class="form__input" id="name" placeholder="Album..." required=""/>
+			<label for="name" class="form__label"></label>
+		</div>
+		<input class="send" type="submit" value="Ajouter à ma liste">
+	</form>
 
-    <form action="" method="post" class="form__addAlbum">
-        <label class="form__addAlbum__label" for="artist">Artiste :<input class="form__addAlbum__label__input" type="text" name="artist" id="artist"></label>
-        <label class="form__addAlbum__label"for="album">Album :<input class="form__addAlbum__label__input" type="text" name="album" id="album"></label>
-        <input type="submit" value="Ajouter">
-    </form>
+	<section class="list">
+		{% if results %}
+			<ul class="list">
+				{% for album in results %}
+					<div class="listArtist">
+						<div class="wrapper">
+							<div class="blog_post">
+								<div class="img_pod">
+									<li class="list__li"><img src="{{ album.album.image.1['#text']}}" alt="jacket de {{ album.album.name }}"></li>
+								</div>
+								<div class="container_copy">
+									<li class="list__li">{{ album.album.artist }}</li>
+									<li class="list__li">{{ album.album.name }}</li>
+								</div>
+							</div>
+						</div>
 
-    <section class="list">
-        {% if results %}
-            <ul  class="list">
-                {% for album in results %}
-                    <li class="list__li"><img src="{{ album.album.image.1['#text']}}" alt="jacket de {{ album.album.name }}"></li>
-                    <li class="list__li">{{ album.album.artist }}</li>
-                    <li class="list__li">{{ album.album.name }}</li>
-                    <ol>
-                        {% for track in album.album.tracks.track %}
-                            <li>{{ track.name }}</li>
-                        {% endfor %}
-                    </ol>
-                {% endfor %}
-            </ul>
-        {% endif %}
-    </section>
+						<ol class="tracks">
+							{% for track in album.album.tracks.track %}
+								<div class="listTracks">
+									<li><img src="data:image/jpeg;base64,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" alt="">{{ track.name }}</li>
+								</div>
+							{% endfor %}
+						</ol>
+					</div>
+                    <div class="transition"></div>
+
+				{% endfor %}
+			</ul>
+		{% endif %}
+	</section>
 {% endblock %}
