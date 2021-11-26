@@ -25,7 +25,7 @@ class HomeController extends AbstractController
     {
         $client = HttpClient::create();
         $nirvana = $client->request('GET', 'https://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=704b3bb51d87a99023fabedf451720ca&artist=nirvana&album=nevermind&format=json');
-        $result = $nirvana->toArray();       
-        return $this->twig->render('Home/index.html.twig', ['result' => $result]);
+        $result = $nirvana->toArray(); 
+        return $this->twig->render('Home/homepage.html.twig', ['result' => $result]);
     }
 }
