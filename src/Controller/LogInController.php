@@ -16,6 +16,7 @@ class LogInController extends AbstractController
      */
     public function index(): string
     {
+
         return $this->twig->render('Login/index.html.twig');
     }
 }
