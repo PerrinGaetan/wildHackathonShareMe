@@ -1,16 +1,13 @@
 <?php
-
 /**
  * Created by PhpStorm.
  * User: aurelwcs
  * Date: 08/04/19
  * Time: 18:40
  */
-
 namespace App\Controller;
 
 use App\Model\SearchManager;
-
 class HomeController extends AbstractController
 {
     /**
@@ -34,9 +31,18 @@ class HomeController extends AbstractController
                 'mostPopular' => $mostPopular]
             );
         }
+        $listUser = [];
+        $users = $searchManager->getAllUserId();
+        foreach ($users as $user) {
+            $listUser[] = $searchManager->getListUser(intval($user));
+        }
 
-        return $this->twig->render('Home/homepage.html.twig', ['mostPopular' => $mostPopular]);
+        return $this->twig->render('Home/homepage.html.twig',
+        [
+            'mostPopular' => $mostPopular, 'users' => $listUser, 'user' => $users]
+        );
     }
+
     public function show()
     {
         return $this->twig->render('Home/profile.html.twig');
