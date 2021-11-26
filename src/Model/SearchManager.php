@@ -79,4 +79,10 @@ class SearchManager extends AbstractManager
         $statement->execute();
         return $statement->fetchAll();
     }
+
+    public function getAllUserId()
+    {
+        $query = "SELECT * FROM `user`;";
+        return $this->pdo->query($query)->fetchAll();
+    }
 }
